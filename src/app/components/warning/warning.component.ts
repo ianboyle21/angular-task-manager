@@ -6,15 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./warning.component.css']
 })
 export class WarningComponent implements OnInit {
-  warningSign: string = "Warning"
+  warningSign: string = "ButtonText"
   constructor() { }
   toggle: boolean = true;
   toggleWarning(){
     this.toggle = !this.toggle;
-    this.warningSign = this.toggle ? 'Warning' : 'No Warning';
+    this.warningSign = this.toggle ? 'Green Button Text' : 'Red Button Text';
   }
-  onEnterInputText(event: any) {
-    console.log(event.target.value)
+  onEnterInputText(event: Event) {
+    console.log((<HTMLInputElement>event.target).value)
+    this.warningSign = (<HTMLInputElement>event.target).value
   }
   ngOnInit(): void {
   }
