@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class WarningComponent implements OnInit {
   warningSign: string = "Warning"
   constructor() { }
-
+  toggle: boolean = true;
+  toggleWarning(){
+    this.toggle = !this.toggle;
+    this.warningSign = this.toggle ? 'Warning' : 'No Warning';
+  }
   ngOnInit(): void {
   }
 

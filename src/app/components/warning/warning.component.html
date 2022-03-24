@@ -1,1 +1,5 @@
-<p>{{warningSign}}</p>
+
+<button (click)="toggleWarning()" 
+[ngClass]="{'green' : toggle, 'red': !toggle}">
+    {{warningSign}}
+</button>
