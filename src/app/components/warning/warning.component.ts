@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WarningComponent implements OnInit {
   warningSign: string = "ButtonText"
+  displayButton = "Display Details?"
+  displayed = false;
   inputUserName = ""
   userName: string = ""
+  counter = 0;
   emptyString = false;
   toggleUserName = false;
   constructor() { }
@@ -33,6 +36,12 @@ export class WarningComponent implements OnInit {
   onEnterInputText(event: Event) {
     console.log((<HTMLInputElement>event.target).value)
     this.warningSign = (<HTMLInputElement>event.target).value
+  }
+
+  toggleDisplay() {
+    this.counter += 1;
+    this.displayed = !this.displayed;
+    this.displayButton = this.displayed ? "Hide Details?" : "Display Details?"
   }
   ngOnInit(): void {
   }

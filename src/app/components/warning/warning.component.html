@@ -11,6 +11,11 @@
     </button>
     <hr>
     <p>{{toggleUserName ? userName : ""}}</p>
+    <hr>
+    <button (click)="toggleDisplay()">{{displayButton}}</button>
+    <hr>
+    <p *ngIf="displayed">Displayed Details</p>
+    <p *ngIf="counter > 5">{{counter}}</p>
 
 </div>
 
