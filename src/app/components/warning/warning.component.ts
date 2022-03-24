@@ -13,6 +13,9 @@ export class WarningComponent implements OnInit {
     this.toggle = !this.toggle;
     this.warningSign = this.toggle ? 'Warning' : 'No Warning';
   }
+  onEnterInputText(event: any) {
+    console.log(event.target.value)
+  }
   ngOnInit(): void {
   }
 

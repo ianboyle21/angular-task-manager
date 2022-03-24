@@ -1,4 +1,4 @@
-
+<input type="text" class="form-control" (input)="onEnterInputText($event)">
 <button (click)="toggleWarning()" 
 [ngClass]="{'green' : toggle, 'red': !toggle}">
     {{warningSign}}
