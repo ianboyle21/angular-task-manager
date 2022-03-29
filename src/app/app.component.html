@@ -4,4 +4,6 @@
   <app-warning></app-warning>
   <app-tasks></app-tasks>
   <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+  <app-odd  *ngFor="let log of logs" [log]="log"></app-odd>
+  <app-even *ngFor="let log of logs" [number]="log"></app-even>
 </div>
