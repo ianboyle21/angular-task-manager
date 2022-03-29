@@ -9,6 +9,9 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WarningComponent } from './components/warning/warning.component';
 import { FormsModule } from '@angular/forms';
+import { GameControlComponent } from './components/game-control/game-control.component';
+import { OddComponent } from './components/odd/odd.component';
+import { EvenComponent } from './components/even/even.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +19,10 @@ import { FormsModule } from '@angular/forms';
     ButtonComponent,
     TasksComponent,
     TaskItemComponent,
-    WarningComponent
+    WarningComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,
